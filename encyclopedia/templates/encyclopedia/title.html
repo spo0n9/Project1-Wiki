@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    {% if entry == None %}
+    Entry is not Found in Directory
+    {% else %}
+    {{ entry|safe }}
+{% endif %}
+<a href="/edit/{{ title }}">Edit {{ title }}</a>
+{% endblock %}
